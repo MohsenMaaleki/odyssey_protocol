@@ -27,17 +27,18 @@ try {
     if (!devvit.post) errors.push('devvit.json: missing "post" configuration');
     if (!devvit.server) errors.push('devvit.json: missing "server" configuration');
     
-    // Check permissions
-    const requiredPermissions = ['identity', 'read', 'edit', 'modposts', 'structuredData'];
-    const permissions = devvit.permissions || [];
+    // Check permissions (v0.12 uses object format)
+    const permissions = devvit.permissions || {};
     
-    requiredPermissions.forEach(perm => {
-      if (!permissions.includes(perm)) {
-        warnings.push(`devvit.json: missing recommended permission "${perm}"`);
-      } else {
-        success.push(`Permission "${perm}" configured`);
-      }
-    });
+    if (permissions.redis) {
+      success.push('Permission "redis" configured');
+    }
+    if (permissions.reddit) {
+      success.push('Permission "reddit" configured');
+    }
+    if (permissions.media) {
+      success.push('Permission "media" configured');
+    }
     
     // Check realtime
     if (devvit.realtime === true) {

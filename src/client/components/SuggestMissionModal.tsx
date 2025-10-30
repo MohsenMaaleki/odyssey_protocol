@@ -119,7 +119,7 @@ export const SuggestMissionModal = ({
                   id="title"
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900"
                   placeholder="e.g., Deploy Solar Observatory"
                   minLength={4}
                   maxLength={60}
@@ -139,7 +139,7 @@ export const SuggestMissionModal = ({
                   id="target"
                   value={formData.target}
                   onChange={(e) => setFormData({ ...formData, target: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900"
                   required
                 >
                   <option value="LEO">LEO (Low Earth Orbit)</option>
@@ -163,7 +163,7 @@ export const SuggestMissionModal = ({
                     id="risk"
                     value={formData.risk}
                     onChange={(e) => setFormData({ ...formData, risk: e.target.value as any })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900"
                     required
                   >
                     <option value="Low">Low</option>
@@ -181,7 +181,7 @@ export const SuggestMissionModal = ({
                     id="reward"
                     value={formData.reward}
                     onChange={(e) => setFormData({ ...formData, reward: e.target.value as any })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900"
                     required
                   >
                     <option value="Science">Science</option>
@@ -200,7 +200,7 @@ export const SuggestMissionModal = ({
                   id="payload_hint"
                   value={formData.payload_hint}
                   onChange={(e) => setFormData({ ...formData, payload_hint: e.target.value as any })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-900"
                   required
                 >
                   <option value="Any">Any</option>
@@ -219,7 +219,7 @@ export const SuggestMissionModal = ({
                   id="description"
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none text-gray-900"
                   placeholder="Describe your mission idea..."
                   rows={4}
                   maxLength={280}
