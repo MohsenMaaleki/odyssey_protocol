@@ -9,11 +9,11 @@ export const createPost = async () => {
   return await reddit.submitCustomPost({
     splash: {
       // Splash Screen Configuration
-      appDisplayName: 'odyssey-protocol',
+      appDisplayName: 'Odyssey Protocol',
       backgroundUri: 'default-splash.png',
-      buttonLabel: 'Tap to Start',
-      description: 'An exciting interactive experience',
-      heading: 'Welcome to the Game!',
+      buttonLabel: 'Launch Mission',
+      description: 'A Reddit-native space mission game',
+      heading: 'Odyssey Protocol',
       appIconUri: 'default-icon.png',
     },
     postData: {

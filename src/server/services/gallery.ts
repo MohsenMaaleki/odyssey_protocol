@@ -3,7 +3,15 @@ import type {
   SavePatchRequest,
   ListGalleryResponse,
 } from '../../shared/types/gallery';
-import { generateSVGPatch, createPatchMetadata, uploadImage } from './imageGenerator';
+import { generateSVGPatch, createPatchMetadata } from './imageGenerator';
+
+/**
+ * Converts SVG string to data URL format for inline display
+ */
+function svgToDataUrl(svgString: string): string {
+  const encoded = encodeURIComponent(svgString).replace(/'/g, '%27').replace(/"/g, '%22');
+  return `data:image/svg+xml;charset=UTF-8,${encoded}`;
+}
 
 /**
  * Gallery Service
@@ -193,8 +201,8 @@ export class GalleryService {
     // Generate SVG patch image
     const svgImage = generateSVGPatch(patchMetadata);
 
-    // Upload image to Reddit media storage
-    const imageUrl = await uploadImage(svgImage, 'svg', this.media);
+    // Convert SVG to data URL for inline display (Reddit media doesn't support SVG uploads)
+    const imageUrl = svgToDataUrl(svgImage);
 
     // Determine outcome
     let outcome: 'success' | 'fail' | 'abort';

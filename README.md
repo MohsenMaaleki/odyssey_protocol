@@ -1,19 +1,34 @@
 # Odyssey Protocol
 
-A Reddit-native space mission game infrastructure built on Devvit. Odyssey Protocol is a competitive space exploration game where players design rockets, unlock technologies, complete missions, and compete for glory on community leaderboards - all within Reddit posts.
+A Reddit-native space mission game built on Devvit. Odyssey Protocol is a competitive space exploration game where players design rockets, unlock technologies, complete missions, and compete for glory on community leaderboards - all within Reddit posts.
 
 **Current Status**: The backend systems and UI components are fully implemented, including a real-time HUD and countdown timer system. The actual space mission gameplay (rocket design, mission phases, voting mechanics) is planned but not yet implemented. The current systems provide the infrastructure that will support the future game.
 
 ## What is Odyssey Protocol?
 
-Odyssey Protocol is an **interactive space mission game** that runs entirely within Reddit. Players take on the role of space program directors, making critical decisions about rocket design, mission planning, and resource management. The game combines strategic planning with community competition, allowing players to:
+Odyssey Protocol is an **interactive space mission game** that runs entirely within Reddit. Players take on the role of space program directors, making critical decisions about rocket design, mission planning, and resource management. The game combines strategic planning with community competition in a unique social gaming experience.
 
-- **Design Custom Rockets**: Choose engines, fuel tanks, payloads, and crew configurations
-- **Unlock Advanced Technologies**: Progress through a tech tree inspired by real space programs
-- **Complete Challenging Missions**: From lunar orbits to deep space probes, each mission tests your skills
-- **Compete on Leaderboards**: Earn points for successful missions and climb seasonal rankings
+### What Makes This Game Innovative
+
+**Reddit-Native Gaming**: Unlike traditional web games, Odyssey Protocol runs entirely within Reddit posts. No external accounts, no downloads, no separate websites - just click a post and play. Your Reddit identity is your game identity, creating a seamless social experience.
+
+**Community-Driven Content**: Players don't just play missions - they create them. The community-proposed missions system lets anyone suggest new mission ideas, vote on favorites, and see winning proposals integrated into the actual game. This creates a living, evolving game shaped by its players.
+
+**Real-Time Multiplayer Without Servers**: Using Devvit's Realtime API, multiple players can watch mission statistics update live, see countdown timers tick down together, and participate in time-sensitive voting windows - all synchronized across devices without traditional game servers.
+
+**Persistent Progression**: Your unlocks, leaderboard rank, and mission history persist across sessions using Redis. Return anytime to continue your space program's journey, with seasonal leaderboards creating natural competitive cycles.
+
+**Social Competition**: Compete with fellow Redditors on seasonal leaderboards, save commemorative mission patches to a shared gallery, and participate in community votes that shape the game's future. Every action contributes to both personal progression and community storytelling.
+
+### Core Gameplay Features
+
+- **Design Custom Rockets**: Choose engines, fuel tanks, payloads, and crew configurations that affect mission success
+- **Unlock Advanced Technologies**: Progress through a tech tree with 19+ unlocks inspired by real space programs
+- **Complete Challenging Missions**: From lunar orbits to deep space probes, each mission tests your strategic planning
+- **Compete on Leaderboards**: Earn Science Points for successful missions and climb seasonal rankings
 - **Shape Future Content**: Propose and vote on new mission ideas that become part of the game
 - **Track Progress in Real-Time**: Watch live mission statistics and countdown timers as events unfold
+- **Save Mission Patches**: Generate and share commemorative SVG patches for completed missions
 
 The game is built on Devvit, Reddit's developer platform, which means it integrates seamlessly with Reddit's identity system, runs in any subreddit, and requires no external accounts or downloads.
 
@@ -99,21 +114,52 @@ All features are tied to your Reddit username and persist across sessions using 
 
 ### Getting Started
 
-Odyssey Protocol is designed to be intuitive and accessible. Here's how to jump in:
+Odyssey Protocol is designed to be intuitive and accessible. Here's your step-by-step guide to becoming a space program director:
 
-1. **Find the Game**: Look for an Odyssey Protocol post in your subreddit (or create one if you're a moderator)
-2. **Launch the App**: Click the "Launch App" button on the post to open the game interface
-3. **Welcome Aboard**: Your Reddit username automatically appears - you're authenticated and ready to play
-4. **Explore the Interface**: The main screen provides access to all game systems through clearly labeled buttons
+#### Step 1: Access the Game
 
-**Available Features:**
+1. **Find an Odyssey Protocol Post**: Look for a post with the Odyssey Protocol app in your subreddit
+   - If you're a moderator, you can create a new post using the "Create Odyssey Protocol Post" menu action
+2. **Click "Launch App"**: The button appears on the post - click it to open the full game interface
+3. **Automatic Authentication**: Your Reddit username appears at the top - you're logged in and ready to play
+4. **First Impressions**: You'll see the main game interface with a space-themed background and several feature buttons
+
+#### Step 2: Understand the Interface
+
+The main screen provides access to all game systems:
 
 - 🔬 **Tech Tree** - Unlock new rocket parts, missions, and bonuses using Science Points
 - 🏆 **Leaderboard** - View seasonal rankings and compete with other players
 - 🖼️ **Gallery** - Browse commemorative mission patches from completed missions
 - 💡 **Suggest Mission** - Propose new mission ideas for the community to vote on
+- 📋 **View Suggestions** - Browse and vote on community-proposed missions
 - 🗳️ **View Ballot** - Vote on curated mission suggestions that will be added to the game
-- 🎮 **Mission HUD Demo** - See the real-time mission tracking system in action
+- 🎮 **Mission HUD Demo** - See the real-time mission tracking system in action (toggle to show/hide)
+
+#### Step 3: Start Your Space Program
+
+**For New Players:**
+
+1. **Check Your Science Points**: Look at the Tech Tree to see your current SP balance (starts at 0)
+2. **Explore Available Unlocks**: Some basic unlocks like "Light Engine" are available from the start
+3. **Complete Missions**: Once gameplay is implemented, missions will award Science Points
+4. **Unlock Technologies**: Spend SP to unlock better engines, fuel tanks, and mission types
+5. **Climb the Leaderboard**: Earn points for successful missions to compete with other players
+
+**For Experienced Players:**
+
+1. **Optimize Your Tech Tree**: Plan your unlock path to maximize mission success rates
+2. **Target Leaderboard Positions**: Check your rank and see how many points you need to reach top 10
+3. **Contribute Mission Ideas**: Propose creative missions that the community might vote for
+4. **Participate in Ballots**: Vote on curated missions to shape the game's future content
+5. **Save Mission Patches**: Create commemorative patches for your most impressive missions
+
+#### Step 4: Engage with the Community
+
+- **Vote on Suggestions**: Help curate which mission ideas make it into the game
+- **Compete on Leaderboards**: Seasonal rankings reset periodically, giving everyone a fresh start
+- **Share Your Patches**: Your mission patches appear in the shared gallery for all players to see
+- **Propose Missions**: Submit your own mission ideas and see if they become part of the game
 
 
 ### Tech Tree System
