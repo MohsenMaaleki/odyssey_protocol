@@ -1,0 +1,81 @@
+.mission-demo {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
+.mission-demo-toggle {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.mission-demo-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mission-demo-toggle:active {
+  transform: translateY(0);
+}
+
+.mission-demo-container {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mission-demo-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mission-demo-info {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.mission-demo-note {
+  margin: 0 0 8px 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.mission-demo-note:last-child {
+  margin-bottom: 0;
+}
+
+.mission-demo-note code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  color: #90caf9;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .mission-demo {
+    position: static;
+    margin: 16px;
+  }
+
+  .mission-demo-toggle {
+    width: 100%;
+  }
+}

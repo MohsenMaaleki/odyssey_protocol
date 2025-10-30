@@ -1,0 +1,31 @@
+.timer-panel {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 280px;
+  backdrop-filter: blur(10px);
+}
+
+.timer-panel-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .timer-panel {
+    min-width: 240px;
+    padding: 12px;
+  }
+
+  .timer-panel-title {
+    font-size: 12px;
+  }
+}

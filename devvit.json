@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "odyssey-protocol",
+  "permissions": {
+    "redis": true,
+    "reddit": true,
+    "media": true
+  },
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "entry": "index.html"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "media": {
+    "dir": "assets"
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "Create a new post",
+        "description": "odyssey-protocol",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/post-create"
+      }
+    ]
+  },
+  "triggers": {
+    "onAppInstall": "/internal/on-app-install"
+  },
+  "scheduler": {
+    "tasks": {
+      "auto-close-ballots": {
+        "endpoint": "/internal/scheduler/auto-close-ballots",
+        "cron": "*/1 * * * *"
+      },
+      "process-timers": {
+        "endpoint": "/internal/scheduler/process-timers",
+        "cron": "*/1 * * * *"
+      }
+    }
+  },
+  "realtime": true,
+  "dev": {
+    "subreddit": "odyssey_protocol_dev"
+  }
+}
