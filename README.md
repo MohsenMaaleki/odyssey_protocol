@@ -303,10 +303,6 @@ Contribute your own mission ideas and vote on community proposals. This system i
 - **Vite**: Build tool and development server
 - **Tailwind CSS**: Utility-first styling framework
 
-## API Endpoints
-
-The app exposes the following REST API endpoints:
-
 - Advanced statistics and analytics
 - Achievement system
 - Mission replay/history viewer
