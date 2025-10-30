@@ -303,9 +303,3 @@ Contribute your own mission ideas and vote on community proposals. This system i
 - **Vite**: Build tool and development server
 - **Tailwind CSS**: Utility-first styling framework
 
-- Advanced statistics and analytics
-- Achievement system
-- Mission replay/history viewer
-- Enhanced moderator dashboard
-- Community challenges and events
-- Seasonal themes and special missions
